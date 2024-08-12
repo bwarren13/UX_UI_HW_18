@@ -1,9 +1,19 @@
+h1{
+    font-family: gistesy;}
+h2, h3, h4{
+    font-family: poppins;
+}
+
+p{
+    font-family: poppins;
+}
+
 nav.inline-block{
     display: inline-block;
     vertical-align: top;
     width: 48%;
     margin-left: auto;
-    background-color: #373738;
+    background-color: #122620;
     text-align: center;
     padding-left: 350px;
     padding-bottom: 10px;
@@ -20,15 +30,49 @@ nav.inline-block{
 .heroImg{
     height: 600px;
     padding: 25px;
-
 }
 
-.content{
-    width: 500px;
-    margin: 0 auto;
+.heroGrid{
+    display: grid;
+    margin-left: 150px;
+    grid-template-rows: 125px 100px 150px;
+    grid-template-columns: 35% 60%;
+    grid-template-areas:
+    'hero heroHeader'
+    'hero heroP'
+    'hero heroButton';
+    margin-top: 10px;
 }
+
+.hero{
+    grid-area: hero;
+}
+.heroHeader{
+    grid-area: heroHeader;
+    width: 600px;
+    margin-left: 10px;
+}
+
+.heroP{
+    grid-area: heroP;
+    width: 600px;
+    margin-left: 10px;
+}
+
+.heroButton{
+    grid-area: heroButton;
+    height: 35px;
+    width: 200px;
+    border-radius: 10px;
+    background-color: #648F6E;
+    color: #FFFEF9;
+    border-color: #122620;
+    margin-left: 150px;
+    font-family: poppins;
+}
+
 footer{
-    background-color: #373738;
+    background-color: #122620;
     padding-left: 500px;
 }
 
@@ -40,16 +84,20 @@ ul.topnav{
     margin: 0;
     padding-top: 10px;
     overflow: hidden;
-    background-color: #333333;
+    background-color: #122620;
+    font-family: poppins;
+    color: #FFFEF9;
 }
 
 ul.footerNav{
-    color: white;
+    color: #FFFEF9;
     text-align: center;
     list-style-type: none;
     display: inline-block;
     vertical-align: top;
-    background-color: #333333;
+    background-color: #122620;
+    font-family: poppins;
+    margin-top: 20px;
 }
 
 li{
@@ -59,4 +107,132 @@ li{
     padding-right: 16px;
     text-decoration: none;
     float: left;
+}
+
+.mySkills{
+    background-color: #122620;
+    color: #FFFEF9;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: .5px;
+}
+.flexContainer{
+    display: flex;
+    background-color: #FFFEF9;
+    margin: 20px;
+    height: 400px;
+    width: 30%, 30%, 30%;
+    text-align: center;
+    color: #122620;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#branding, #wireframe, #prototype{
+    width: 33%;
+    margin: 10px;
+    height: 155px; 
+}
+
+.workGrid{
+    display: grid;
+    grid-template-rows: 300px 300px 300px;
+    grid-template-columns: 30% 30% 10%;
+    grid-template-areas:
+    'deptEdImg deptEdText'
+    'outNaboutImg outNaboutText'
+    'GrinImg GrinText';
+    background-color: #FFFEF9;
+    color: #122620;
+    padding-top: 20px;
+    margin: 20px;
+    row-gap: 25px;
+    padding-left: 100px;
+    padding-bottom: 20px;
+    align-content: center;
+    justify-content: center;
+}
+
+.deptEdImg{
+    width: 200px;
+    height: 300px; 
+    grid-area: deptEdImg;
+}
+
+.deptEdText{
+    grid-area: deptEdText;
+}
+
+.outNaboutImg{
+    grid-area: outNaboutImg;
+    width: 200px;
+    height: 300px;
+}
+
+.outNaboutText{
+    grid-area: outNaboutText;
+}
+
+.GrinImg{
+    grid-area: GrinImg;
+    width: 200px;
+    height: 300px;
+}
+
+.GrinText{
+    grid-area: GrinText;
+}
+
+.myWork{
+    background-color: #122620;
+    color: #FFFEF9;
+    text-align: center;
+    padding-top: .5px;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+button{
+    font-family: poppins;
+    background-color: #648F6E;
+    color: #FFFEF9;
+    border-color: #122620;
+    height: 35px;
+    width: 150px;
+    border-radius: 10px;
+}
+
+@media screen and (max-width:600px){
+   .flexContainer{
+    flex-direction: column;
+    width: 100%;
+   } 
+   #branding, #wireframe, #prototype{
+    width: 100%;
+   }
+   .workGrid{
+    display: grid;
+    grid-template-rows: 300px 300px 300px 300px 300px 300px;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    'deptEdImg' 
+    'deptEdText'
+    'outNaboutImg' 
+    'outNaboutText'
+    'GrinImg' 
+    'GrinText';
+   }
+   .heroGrid{
+    display: grid;
+    grid-template-rows: 300px 300px 300px 300px;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    'hero' 
+    'heroHeader'
+    'heroP'
+    'heroButton';
+   }
 }
