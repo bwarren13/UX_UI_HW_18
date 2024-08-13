@@ -151,7 +151,7 @@ li{
 .workGrid{
     display: grid;
     grid-template-rows: 300px 300px 300px;
-    grid-template-columns: 2fr 3fr .5fr;
+    grid-template-columns: 2fr 3fr;
     grid-template-areas:
     'deptEdImg deptEdText'
     'outNaboutImg outNaboutText'
@@ -163,6 +163,7 @@ li{
     row-gap: 50px;
     padding-left: 100px;
     padding-bottom: 20px;
+    padding-right: 100px;
     align-content: center;
     justify-content: center;
 }
