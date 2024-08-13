@@ -1,3 +1,6 @@
+body{
+    background-color: #122620;
+}
 h1{
     font-family: gistesy;}
 h2, h3, h4{
@@ -11,9 +14,9 @@ p{
 nav.inline-block{
     display: inline-block;
     vertical-align: top;
-    width: 48%;
+    width:61%;
     margin-left: auto;
-    background-color: #122620;
+    background-color: #648F6E;
     text-align: center;
     padding-left: 350px;
     padding-bottom: 10px;
@@ -34,15 +37,16 @@ nav.inline-block{
 
 .heroGrid{
     display: grid;
-    margin-left: 150px;
     grid-template-rows: 125px 100px 150px;
     grid-template-columns: 35% 60%;
     grid-template-areas:
     'hero heroHeader'
     'hero heroP'
     'hero heroButton';
-    margin-top: 10px;
-    
+    column-gap: 50px;
+    max-width: 1500px;
+    align-content: center;
+    margin: 0 auto;
 }
 
 .hero{
@@ -52,12 +56,14 @@ nav.inline-block{
     grid-area: heroHeader;
     width: 600px;
     margin-left: 10px;
+    color: #FFFEF9;
 }
 
 .heroP{
     grid-area: heroP;
     width: 600px;
     margin-left: 10px;
+    color: #FFFEF9;
 }
 
 .heroButton{
@@ -73,7 +79,7 @@ nav.inline-block{
 }
 
 footer{
-    background-color: #122620;
+    background-color: #648F6E;
     padding-left: 500px;
 }
 
@@ -85,18 +91,18 @@ ul.topnav{
     margin: 0;
     padding-top: 10px;
     overflow: hidden;
-    background-color: #122620;
+    background-color: #648F6E;
     font-family: poppins;
-    color: #FFFEF9;
+    color: #122620;
 }
 
 ul.footerNav{
-    color: #FFFEF9;
+    color: #122620;
     text-align: center;
     list-style-type: none;
     display: inline-block;
     vertical-align: top;
-    background-color: #122620;
+    background-color: #648F6E;
     font-family: poppins;
     margin-top: 20px;
 }
@@ -111,24 +117,29 @@ li{
 }
 
 .mySkills{
-    background-color: #122620;
+    background-color: #648F6E;
     color: #FFFEF9;
     text-align: center;
     padding-bottom: 20px;
     padding-top: .5px;
+    max-width: 1500px;
+    margin: 0 auto;
 }
 .flexContainer{
     display: flex;
-    background-color: #FFFEF9;
     margin: 20px;
     height: 400px;
-    width: 30%, 30%, 30%;
     text-align: center;
     color: #122620;
     align-items: center;
-    align-content: center;
-    justify-content: center;
-    flex-direction: row;
+    background-color: #FFFEF9;
+    max-width: 1500px;
+}
+
+.flexContainer div{
+    padding: 10px;
+    flex-grow: 1;
+    width: 33.33%;
 }
 
 #branding, #wireframe, #prototype{
@@ -140,7 +151,7 @@ li{
 .workGrid{
     display: grid;
     grid-template-rows: 300px 300px 300px;
-    grid-template-columns: 30% 30% 10%;
+    grid-template-columns: 2fr 3fr .5fr;
     grid-template-areas:
     'deptEdImg deptEdText'
     'outNaboutImg outNaboutText'
@@ -149,7 +160,7 @@ li{
     color: #122620;
     padding-top: 20px;
     margin: 20px;
-    row-gap: 25px;
+    row-gap: 50px;
     padding-left: 100px;
     padding-bottom: 20px;
     align-content: center;
@@ -187,13 +198,13 @@ li{
 }
 
 .myWork{
-    background-color: #122620;
+    background-color: #648F6E;
     color: #FFFEF9;
     text-align: center;
     padding-top: .5px;
-    padding-bottom: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 0 auto;
+    max-width: 1500px;
+    align-items: center;
 }
 
 button{
@@ -209,7 +220,8 @@ button{
 @media only screen and (max-width:600px){
    .flexContainer{
     flex-direction: column;
-    width: 100%;
+    width: 90%;
+    height: auto;
    } 
    #branding, #wireframe, #prototype{
     width: 100%;
@@ -225,15 +237,30 @@ button{
     'outNaboutText'
     'GrinImg' 
     'GrinText';
+    padding-left: 0;
+   }
+
+   .workGrid img{
+    padding-left: 100px;
    }
    .heroGrid{
     display: grid;
-    grid-template-rows: 300px 300px 300px 300px;
+    grid-template-rows: 400px 120px 100px 100px;
     grid-template-columns: 1fr;
     grid-template-areas: 
     'hero' 
     'heroHeader'
     'heroP'
     'heroButton';
+    height: auto;
+    width: auto;
+   }
+
+   .heroImg{
+    height: auto;
+   }
+
+   footer{
+    padding-left: 0;
    }
 }
