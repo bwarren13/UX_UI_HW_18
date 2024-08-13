@@ -1,6 +1,4 @@
-body{
-    background-color: #122620;
-}
+
 h1{
     font-family: gistesy;
 }
@@ -9,6 +7,9 @@ h2, h3, h4{
     font-family: poppins;
 }
 
+body{
+    background-color: #122620;
+}
 p{
     font-family: poppins;
 }
